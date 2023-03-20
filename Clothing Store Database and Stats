@@ -19,12 +19,12 @@ INSERT INTO clothing VALUES (15, "crop tops", 15, "aqua", "medium", 10);
 --display the database in entirety 
 SELECT * FROM clothing;
 
---in descending order the items ranked 7 and above in popularity  
+--what are the items ranked 7 and above in popularity?  
 SELECT * FROM clothing WHERE popularity >=7 ORDER BY popularity desc;
 
---ordered by color and sum amount of each in ascending order
+--what is the sum amount of each color?
 SELECT color, SUM(quantity) FROM clothing GROUP BY color ORDER BY SUM(quantity) asc;
 
---ordered by size and sum amount of each in descending order
+--what is the sum amount of each size?
 SELECT size, SUM(quantity) FROM clothing GROUP BY size 
 ORDER BY size desc;
