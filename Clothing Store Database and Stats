@@ -1,20 +1,20 @@
 CREATE TABLE clothing (id INTEGER PRIMARY KEY, name TEXT, quantity INTEGER, color TEXT, size INTEGER, popularity INTEGER);
 
-INSERT INTO clothing VALUES (1, "tanks", 10, "blue", "medium", 10); 
+INSERT INTO clothing VALUES (1, "tank top", 10, "blue", "medium", 10); 
 INSERT INTO clothing VALUES (2, "shorts", 15, "navy", "large", 10); 
 INSERT INTO clothing VALUES (3, "bralette", 5, "white", "medium", 5); 
 INSERT INTO clothing VALUES (4, "jeans", 10, "blue", "small", 10); 
 INSERT INTO clothing VALUES (5, "hoodie", 5, "black", "large", 10); 
 INSERT INTO clothing VALUES (6, "shoes", 7, "white", "medium", 7); 
-INSERT INTO clothing VALUES (7, "beanies", 3, "yellow", "large", 3); 
-INSERT INTO clothing VALUES (8, "skirts", 5, "navy", "medium", 6); 
-INSERT INTO clothing VALUES (9, "dresses", 5, "pink", "medium", 10); 
-INSERT INTO clothing VALUES (10, "jackets", 6, "black", "large", 8); 
-INSERT INTO clothing VALUES (11, "tshirts", 10, "red", "large", 10); 
+INSERT INTO clothing VALUES (7, "beanie", 3, "yellow", "large", 3); 
+INSERT INTO clothing VALUES (8, "skirt", 5, "navy", "medium", 6); 
+INSERT INTO clothing VALUES (9, "dress", 5, "pink", "medium", 10); 
+INSERT INTO clothing VALUES (10, "jacket", 6, "black", "large", 8); 
+INSERT INTO clothing VALUES (11, "tshirt", 10, "red", "large", 10); 
 INSERT INTO clothing VALUES (12, "socks", 10, "white", "large", 2); 
 INSERT INTO clothing VALUES (13, "underwear", 10, "white", "small", 2); 
-INSERT INTO clothing VALUES (14, "sweaters", 9, "skye blue", "medium", 9);
-INSERT INTO clothing VALUES (15, "crop tops", 15, "aqua", "medium", 10);
+INSERT INTO clothing VALUES (14, "sweater", 9, "skye blue", "medium", 9);
+INSERT INTO clothing VALUES (15, "crop top", 15, "aqua", "medium", 10);
 
 --display the database in entirety 
 SELECT * FROM clothing;
