@@ -1,30 +1,38 @@
-CREATE TABLE clothing (id INTEGER PRIMARY KEY, name TEXT, quantity INTEGER, color TEXT, size INTEGER, popularity INTEGER);
+CREATE TABLE clothing (id INTEGER PRIMARY KEY, name TEXT, quantity INTEGER, color TEXT, size INTEGER, price INTEGER);
 
 INSERT INTO clothing VALUES (1, "tank top", 10, "blue", "medium", 10); 
-INSERT INTO clothing VALUES (2, "shorts", 15, "navy", "large", 10); 
-INSERT INTO clothing VALUES (3, "bralette", 5, "white", "medium", 5); 
-INSERT INTO clothing VALUES (4, "jeans", 10, "blue", "small", 10); 
-INSERT INTO clothing VALUES (5, "hoodie", 5, "black", "large", 10); 
-INSERT INTO clothing VALUES (6, "shoes", 7, "white", "medium", 7); 
-INSERT INTO clothing VALUES (7, "beanie", 3, "yellow", "large", 3); 
-INSERT INTO clothing VALUES (8, "skirt", 5, "navy", "medium", 6); 
-INSERT INTO clothing VALUES (9, "dress", 5, "pink", "medium", 10); 
-INSERT INTO clothing VALUES (10, "jacket", 6, "black", "large", 8); 
-INSERT INTO clothing VALUES (11, "tshirt", 10, "red", "large", 10); 
-INSERT INTO clothing VALUES (12, "socks", 10, "white", "large", 2); 
-INSERT INTO clothing VALUES (13, "underwear", 10, "white", "small", 2); 
-INSERT INTO clothing VALUES (14, "sweater", 9, "skye blue", "medium", 9);
-INSERT INTO clothing VALUES (15, "crop top", 15, "aqua", "medium", 10);
+INSERT INTO clothing VALUES (2, "shorts", 15, "navy", "large", 20); 
+INSERT INTO clothing VALUES (3, "bralette", 5, "white", "medium", 15); 
+INSERT INTO clothing VALUES (4, "jeans", 10, "blue", "small", 25); 
+INSERT INTO clothing VALUES (5, "hoodie", 5, "black", "large",  35); 
+INSERT INTO clothing VALUES (6, "shoes", 7, "white", "medium", 40); 
+INSERT INTO clothing VALUES (7, "beanie", 3, "yellow", "large", 12); 
+INSERT INTO clothing VALUES (8, "skirt", 5, "navy", "medium", 15); 
+INSERT INTO clothing VALUES (9, "dress", 5, "pink", "medium", 20); 
+INSERT INTO clothing VALUES (10, "jacket", 6, "black", "large", 22); 
+INSERT INTO clothing VALUES (11, "tshirt", 10, "red", "large", 11); 
+INSERT INTO clothing VALUES (12, "socks", 10, "white", "large", 7); 
+INSERT INTO clothing VALUES (13, "underwear", 10, "white", "small", 10); 
+INSERT INTO clothing VALUES (14, "sweater", 9, "skye blue", "medium", 15);
+INSERT INTO clothing VALUES (15, "crop top", 15, "aqua", "medium", 15);
 
 --display the database in entirety 
 SELECT * FROM clothing;
 
---what are the items ranked 7 and above in popularity?  
-SELECT * FROM clothing WHERE popularity >=7 ORDER BY popularity desc;
+--what items are less than or equal to $15? 
+SELECT name, quantity, color, size, price 
+    FROM clothing 
+    WHERE price <=15 
+    ORDER BY price desc;
 
---what is the sum amount of each color?
-SELECT color, SUM(quantity) FROM clothing GROUP BY color ORDER BY SUM(quantity) asc;
+--what is the quantity of each color?
+SELECT color, SUM(quantity) 
+    FROM clothing 
+    GROUP BY color 
+    ORDER BY SUM(quantity) asc;
 
---what is the sum amount of each size?
-SELECT size, SUM(quantity) FROM clothing GROUP BY size 
+--what is the quantity of each size?
+SELECT size, SUM(quantity) 
+FROM clothing 
+GROUP BY size 
 ORDER BY size desc;
