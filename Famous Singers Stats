@@ -1,0 +1,102 @@
+CREATE TABLE singers (id INTEGER PRIMARY KEY AUTOINCREMENT,
+    first_name TEXT,
+    last_name TEXT,
+    genre TEXT);
+    
+INSERT INTO singers 
+    VALUES (1,"Ariana", "Grande", "Pop");
+INSERT INTO singers 
+    VALUES (2,"Rita", "Ora", "Pop"); INSERT INTO singers 
+    VALUES (3,"Ice", "Spice", "Hip Hop");
+INSERT INTO singers 
+    VALUES (4,"Rihanna", null, "Pop");
+INSERT INTO singers 
+    VALUES (5,"Shakira", null, "Latin");
+INSERT INTO singers 
+    VALUES (6,"Enrique", "Iglesias", "Latin");
+INSERT INTO singers 
+    VALUES (7,"Rob", "Thomas", "Pop Rock");
+    
+SELECT * FROM singers;
+
+CREATE TABLE songs (id INTEGER PRIMARY KEY AUTOINCREMENT,
+    title TEXT,
+    release_year INTEGER);
+    
+INSERT INTO songs 
+    VALUES (1,"Thank you, Next", 2018);  INSERT INTO songs 
+    VALUES (2,"Doing It", 2014); 
+INSERT INTO songs 
+    VALUES (3,"Boy's a Liar", 2023);
+INSERT INTO songs 
+    VALUES (4,"Needed Me", 2016);
+INSERT INTO songs 
+    VALUES (5,"La Tortura", 2005);  INSERT INTO songs 
+    VALUES (6,"Hero", 2001);
+INSERT INTO songs 
+    VALUES (7,"Lonely No More", 2005);
+    
+SELECT * FROM songs;
+
+CREATE TABLE stats (id INTEGER PRIMARY KEY AUTOINCREMENT,
+    homestate TEXT,
+    spouse TEXT);
+
+INSERT INTO stats 
+    VALUES (1,"Florida", "Dalton Gomez");
+INSERT INTO stats 
+    VALUES (2,"Former Yugoslavia", "Taika Waititi");
+INSERT INTO stats
+    VALUES (3, "New York City", null);
+INSERT INTO stats 
+    VALUES (4,"Barbados", "ASAP Rocky");
+INSERT INTO stats 
+    VALUES (5,"Colombia", null);
+INSERT INTO stats 
+    VALUES (6,"Spain", "Anna Kournikova");
+INSERT INTO stats 
+    VALUES (7,"South Carolina", "Marisol Maldonado");
+
+SELECT * FROM stats;
+
+CREATE TABLE ages_stats (id INTEGER PRIMARY KEY AUTOINCREMENT,
+    full_name TEXT,
+    age INTEGER,
+    zodiac_sign TEXT);
+    
+INSERT INTO ages_stats 
+    VALUES (1, "Ariana Grande", 29, "cancer");
+INSERT INTO ages_stats 
+    VALUES (2,"Rita Ora", 32, "sagittarius");
+INSERT INTO ages_stats
+    VALUES (3, "Ice Spice", 23, "capricorn");
+INSERT INTO ages_stats 
+    VALUES (4,"Rihanna", 35, "pisces");
+INSERT INTO ages_stats 
+    VALUES (5,"Shakira", 46, "aquarius" );
+INSERT INTO ages_stats 
+    VALUES (6,"Enrique Iglesias", 47, "taurus");
+INSERT INTO ages_stats 
+    VALUES (7,"Rob Thomas", 51, "aquarius");
+
+SELECT * FROM ages_stats;
+
+CREATE TABLE elements (id INTEGER PRIMARY KEY AUTOINCREMENT,
+    fullname TEXT,
+    zodiac_element TEXT);
+
+INSERT INTO elements 
+    VALUES (1,"Ariana Grande", "water");
+INSERT INTO elements
+    VALUES (2,"Rita Ora", "fire"); INSERT INTO elements 
+    VALUES (3,"Ice Spice", "earth");
+INSERT INTO elements 
+    VALUES (4,"Rihanna", "water");
+INSERT INTO elements 
+    VALUES (5,"Shakira", "air");
+INSERT INTO elements 
+    VALUES (6,"Enrique Iglesias", "earth");
+INSERT INTO elements 
+    VALUES (7,"Rob Thomas", "air");
+  
+SELECT * FROM elements;
