@@ -108,4 +108,25 @@ SELECT a.full_name, a.age, a.zodiac_sign, e.zodiac_element FROM ages_stats a
     JOIN elements e
     ON a.id = e.id;
 
-SELECT zodiac_element FROM elements
+SELECT COUNT(zodiac_element), zodiac_element FROM elements
+    GROUP BY zodiac_element;
+    
+SELECT a.full_name, a.age, e.zodiac_element FROM ages_stats a
+    JOIN elements e
+    ON a.id = e.id
+    WHERE e.zodiac_element = "earth" 
+    OR e.zodiac_element = "water"
+    GROUP BY a.full_name;
+    
+SELECT a.full_name, a.age, s.hometown, s.spouse FROM ages_stats a
+    JOIN stats s
+    ON a.id = s.id
+    WHERE a.age >= 35
+    AND s.spouse IS NOT NULL;
+    
+SELECT a.full_name, so.title, s.genre  FROM ages_stats a
+    JOIN songs so
+    ON a.id = so.id
+    JOIN singers s
+    ON so.id = s.id;
+    
