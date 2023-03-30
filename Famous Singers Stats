@@ -39,7 +39,7 @@ INSERT INTO songs
 SELECT * FROM songs;
 
 CREATE TABLE stats (id INTEGER PRIMARY KEY AUTOINCREMENT,
-    homestate TEXT,
+    hometown TEXT,
     spouse TEXT);
 
 INSERT INTO stats 
@@ -82,21 +82,30 @@ INSERT INTO ages_stats
 SELECT * FROM ages_stats;
 
 CREATE TABLE elements (id INTEGER PRIMARY KEY AUTOINCREMENT,
-    fullname TEXT,
     zodiac_element TEXT);
 
 INSERT INTO elements 
-    VALUES (1,"Ariana Grande", "water");
+    VALUES (1, "water");
 INSERT INTO elements
-    VALUES (2,"Rita Ora", "fire"); INSERT INTO elements 
-    VALUES (3,"Ice Spice", "earth");
+    VALUES (2, "fire"); INSERT INTO elements 
+    VALUES (3, "earth");
 INSERT INTO elements 
-    VALUES (4,"Rihanna", "water");
+    VALUES (4, "water");
 INSERT INTO elements 
-    VALUES (5,"Shakira", "air");
+    VALUES (5, "air");
 INSERT INTO elements 
-    VALUES (6,"Enrique Iglesias", "earth");
+    VALUES (6, "earth");
 INSERT INTO elements 
-    VALUES (7,"Rob Thomas", "air");
+    VALUES (7, "air");
   
 SELECT * FROM elements;
+
+SELECT a.full_name, s.hometown, s.spouse FROM ages_stats a
+    JOIN stats s
+    ON a.id = s.id;
+    
+SELECT a.full_name, a.age, a.zodiac_sign, e.zodiac_element FROM ages_stats a
+    JOIN elements e
+    ON a.id = e.id;
+
+SELECT zodiac_element FROM elements
