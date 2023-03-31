@@ -100,30 +100,36 @@ INSERT INTO elements
   
 SELECT * FROM elements;
 
+--what is the full name, hometown, and spouse of each singer? 
 SELECT a.full_name, s.hometown, s.spouse FROM ages_stats a
     JOIN stats s
     ON a.id = s.id;
-    
+
+--what is the full name, age, zodiac sign, and zodiac element of each singer?
 SELECT a.full_name, a.age, a.zodiac_sign, e.zodiac_element FROM ages_stats a
     JOIN elements e
     ON a.id = e.id;
 
+--how many singers are in each zodiac element?
 SELECT COUNT(zodiac_element), zodiac_element FROM elements
     GROUP BY zodiac_element;
-    
+
+--what is the full name and age of the singers zodiac elements of earth or water? 
 SELECT a.full_name, a.age, e.zodiac_element FROM ages_stats a
     JOIN elements e
     ON a.id = e.id
     WHERE e.zodiac_element = "earth" 
     OR e.zodiac_element = "water"
     GROUP BY a.full_name;
-    
+
+--what is the full name, age, hometown, and spouse of the singers who are 35 years or older and have a spouse?
 SELECT a.full_name, a.age, s.hometown, s.spouse FROM ages_stats a
     JOIN stats s
     ON a.id = s.id
     WHERE a.age >= 35
     AND s.spouse IS NOT NULL;
-    
+
+--what is the full name, song title, and genre of each singer? 
 SELECT a.full_name, so.title, s.genre  FROM ages_stats a
     JOIN songs so
     ON a.id = so.id
