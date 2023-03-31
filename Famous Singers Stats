@@ -114,7 +114,7 @@ SELECT a.full_name, a.age, a.zodiac_sign, e.zodiac_element FROM ages_stats a
 SELECT COUNT(zodiac_element), zodiac_element FROM elements
     GROUP BY zodiac_element;
 
---what is the full name and age of the singers zodiac elements of earth or water? 
+--what is the full name and age of the singers whose zodiac elements are earth or water? 
 SELECT a.full_name, a.age, e.zodiac_element FROM ages_stats a
     JOIN elements e
     ON a.id = e.id
