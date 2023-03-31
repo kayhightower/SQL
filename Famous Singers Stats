@@ -129,4 +129,3 @@ SELECT a.full_name, so.title, s.genre  FROM ages_stats a
     ON a.id = so.id
     JOIN singers s
     ON so.id = s.id;
-    
