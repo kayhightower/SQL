@@ -87,7 +87,8 @@ CREATE TABLE elements (id INTEGER PRIMARY KEY AUTOINCREMENT,
 INSERT INTO elements 
     VALUES (1, "water");
 INSERT INTO elements
-    VALUES (2, "fire"); INSERT INTO elements 
+    VALUES (2, "fire"); 
+INSERT INTO elements 
     VALUES (3, "earth");
 INSERT INTO elements 
     VALUES (4, "water");
